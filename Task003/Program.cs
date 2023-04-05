@@ -2,7 +2,6 @@
 на вход длину массива, минимальное значение массива и 
 максимальное значение массива, создаёт массив с заданными 
 параметрами и выводит значения на экран
-
 5, 1, 19 -> [1, 2, 5, 7, 19]
 
 Т.е:
@@ -19,12 +18,12 @@ Console.WriteLine("Введите минимальное допустимое з
 int min = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите максимальное допустимое значение массива:");
 int max = int.Parse(Console.ReadLine());
-void FillArray(int[] collection)
+void NewArray(int[] collection)
 {
     int length = collection.Length;
     for (int i = 0; i < length; i++)
     {
-        collection[i] = new Random().Next(min, max);
+        collection[i] = new Random().Next(min, max+1);
     }
 }
 void PrintArray(int[] col)
@@ -40,9 +39,13 @@ void PrintArray(int[] col)
 }
 
 int[] array = new int[lenght];
-FillArray(array);
+NewArray(array);
 PrintArray(array);
 
 
+/* В итоге я выполнил задание, но не понял как создаются функции,
+точнее не уловил синтаксис. Задание я сделал по аналогии с тем,
+которое делали на занятии. Пересмотрю ещё раз все материалы по 
+функциям, надеюсь всё пойму)   */
 
 
